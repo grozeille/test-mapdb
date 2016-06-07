@@ -78,7 +78,7 @@ public class StreamController {
 
                 for(int cpt = 0; cpt < 1000000; cpt++) {
                     // go as fast as you can!
-                    channel.add("{ \"msgId\": "+cpt+" }");
+                    channel.add("{ \"msgId\": "+cpt+", \"requestId\": "+requestId+" }");
                     if(cpt % 500 == 0){
                         db.commit();
                     }
